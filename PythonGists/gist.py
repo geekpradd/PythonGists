@@ -52,7 +52,7 @@ class PythonGists(object):
 	def GistFromFile(description,file):
 		with open(file,'r') as f:
 			content=f.read()
-		return GitHubGist.Gist(description,content,file)
+		return PythonGists.Gist(description,content,file)
 	def createGist(self,description,content,name):
 		return self.Gist(description,content,name,self.accessToken)
 	def createGistFromFile(self,description,file):
